@@ -13,7 +13,7 @@
     <title>Node/Angular Album Collector</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />-->
     <link rel="stylesheet" href="css/angular-material.min.css" type="text/css" />
     <link rel="stylesheet" href="css/materialdesignicons.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" />
@@ -133,7 +133,7 @@
         <div layout="row" flex="100" class="albumRow"
              ng-repeat="album in albums | filter:userFilter | orderBy:'albumName' ">
                 <div flex="25">
-                    <a ng-init="toggleDetails = false" ng-click="openBottomSheet()" style="cursor: pointer"> {{ album.albumName }} </a>
+                    <p><a ng-init="toggleDetails = false" ng-click="openBottomSheet()" style="cursor: pointer"> {{ album.albumName }} </a></p>
                 </div>
                 <div flex="25">
                     <p>{{ album.albumArtist }}</p>

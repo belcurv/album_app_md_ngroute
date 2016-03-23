@@ -2,6 +2,10 @@ html, body {
 	height: 100%;
 }
 
+button .material-icons {
+    margin-top: 7px;
+}
+
 .albumdetails{
   max-height: 600px;
   /* -webkit-transition: max-height 0.5s; */  /* uncomment for animated transition */
@@ -26,12 +30,14 @@ html, body {
 .albumHeader {
     border-bottom: 2px solid #a7a7a7;
     padding-left: 10px;
+    font: 15px Helvetica, sans-serif;
     font-weight: bold;
 }
 
 .albumRow {
+    font: 15px Helvetica, sans-serif;
     border-top: 1px solid #a7a7a7;
-    padding-top: 6px;
+/*    padding-top: 6px;*/
     padding-left: 10px;
 }
 
@@ -40,7 +46,7 @@ html, body {
 }
 
 .albumRow:nth-child(odd) {
-  border-top: 1px solid #c6c6c6;
+/*  border-top: 1px solid #c6c6c6;*/
 }
 
 textarea {
