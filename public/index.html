@@ -36,12 +36,13 @@
     <!-- ===================== HEADER AND ALBUM COUNT ===================== -->
     <md-toolbar>
         <div class="md-toolbar-tools">
-            <p><strong> Total Albums: {{ albums.length }} </strong></p>
-            
-            <md-button ng-click="openSidebar()">
+            <md-button class="md-primary md-raised" ng-click="openSidebar()">
                 <md-icon class="mdi mdi-plus-circle"></md-icon>
                 Add Album
             </md-button>
+            
+            <p><strong> Total Albums: {{ albums.length }} </strong></p>
+            
         </div>
     </md-toolbar>
 
@@ -89,12 +90,12 @@
                 
                 <!-- BUTTONS -->
                 <div layout="row">
-                    <md-button class="md-primary" ng-if="!editing"
+                    <md-button class="md-primary md-raised" ng-if="!editing"
                                ng-disabled="!formData.albumName.length || buttonDisabled"
                                ng-click="createAlbum()">
                         Save
                     </md-button>
-                    <md-button class="md-warn" ng-click="closeSidebar()">
+                    <md-button class="md-warn md-raised" ng-click="closeSidebar()">
                         Cancel
                     </md-button>
                 </div>
@@ -108,22 +109,22 @@
 
         <!-- header row -->
         <div layout="row" flex="100" class="albumHeader">
-            <div flex="25">
+            <div flex="60" flex-gt-sm="30">
                 <p>Album Name</p>
             </div>
-            <div flex="25">
+            <div hide show-gt-sm flex-gt-sm="20">
                 <p>Artist</p>
             </div>
-            <div flex="15">
+            <div hide show-gt-sm flex-gt-sm="15">
                 <p>Genre</p>
             </div>
-            <div flex="15">
+            <div hide show-gt-sm flex-gt-sm="15">
                 <p>Owner</p>
             </div>
-            <div flex="10">
+            <div flex="20" flex-gt-sm="10">
                 <p>Last Listen</p>
             </div>
-            <div flex="10">
+            <div flex="20" flex-gt-sm="10">
                 <p>Listens</p>
             </div>
         </div>
@@ -131,29 +132,26 @@
         <!-- table row content loop -->
         <div layout="row" flex="100" class="albumRow"
              ng-repeat="album in albums | filter:userFilter | orderBy:'albumName' ">
-                <div flex="25">
-                    <p><a ng-init="toggleDetails = false" ng-click="openBottomSheet()" style="cursor: pointer"> {{ album.albumName }} </a></p>
-                </div>
-                <div flex="25">
-                    <p>{{ album.albumArtist }}</p>
-                </div>
-                <div flex="14">
-                    <p>{{ album.albumGenre }}</p>
-                </div>
-                <div flex="14">
-                    <p>{{ album.albumOwner }}</p>
-                </div>
-                <div flex="10">
-                    <p>{{ album.albumLastListen }}</p>
-                </div>
-                <div flex="10">
-                    <p>{{ album.albumNumberListens }}</p>
-                </div>
-
+            <div flex="60" flex-gt-sm="30">
+                <p><a ng-click="openSidebar()" style="cursor: pointer; text-decoration: underline;"> {{ album.albumName }} </a></p>
+            </div>
+            <div hide show-gt-sm flex-gt-sm="20">
+                <p>{{ album.albumArtist }}</p>
+            </div>
+            <div hide show-gt-sm flex-gt-sm="14">
+                <p>{{ album.albumGenre }}</p>
+            </div>
+            <div hide show-gt-sm flex-gt-sm="14">
+                <p>{{ album.albumOwner }}</p>
+            </div>
+            <div flex="20" flex-gt-sm="10">
+                <p>{{ album.albumLastListen }}</p>
+            </div>
+            <div flex="20" flex-gt-sm="10">
+                <p>{{ album.albumNumberListens }}</p>
+            </div>
         </div>
-
     </md-content>
 
 </body>
-
 </html>
