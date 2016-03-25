@@ -6,7 +6,7 @@
     "author": "JRS",
     "repository": {
         "type" : "git",
-        "url"  : "https://github.com/belcurv/album_app-md"
+        "url"  : "https://github.com/belcurv/album_app_md"
     },
     "dependencies": {
         "body-parser": "^1.14.2",

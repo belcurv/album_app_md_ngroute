@@ -109,7 +109,7 @@
 
         <!-- header row -->
         <div layout="row" flex="100" class="albumHeader">
-            <div flex="60" flex-gt-sm="30">
+            <div flex="50" flex-gt-sm="30">
                 <p>Album Name</p>
             </div>
             <div hide show-gt-sm flex-gt-sm="20">
@@ -121,10 +121,10 @@
             <div hide show-gt-sm flex-gt-sm="15">
                 <p>Owner</p>
             </div>
-            <div flex="20" flex-gt-sm="10">
+            <div flex="25" flex-gt-sm="10">
                 <p>Last Listen</p>
             </div>
-            <div flex="20" flex-gt-sm="10">
+            <div flex="25" flex-gt-sm="10">
                 <p>Listens</p>
             </div>
         </div>
@@ -132,7 +132,7 @@
         <!-- table row content loop -->
         <div layout="row" flex="100" class="albumRow"
              ng-repeat="album in albums | filter:userFilter | orderBy:'albumName' ">
-            <div flex="60" flex-gt-sm="30">
+            <div flex="50" flex-gt-sm="30">
                 <p><a ng-click="openSidebar()" style="cursor: pointer; text-decoration: underline;"> {{ album.albumName }} </a></p>
             </div>
             <div hide show-gt-sm flex-gt-sm="20">
@@ -144,10 +144,10 @@
             <div hide show-gt-sm flex-gt-sm="14">
                 <p>{{ album.albumOwner }}</p>
             </div>
-            <div flex="20" flex-gt-sm="10">
+            <div flex="25" flex-gt-sm="10">
                 <p>{{ album.albumLastListen }}</p>
             </div>
-            <div flex="20" flex-gt-sm="10">
+            <div flex="25" flex-gt-sm="10">
                 <p>{{ album.albumNumberListens }}</p>
             </div>
         </div>
