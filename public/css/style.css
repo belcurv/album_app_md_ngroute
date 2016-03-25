@@ -52,3 +52,9 @@ button .material-icons {
 textarea {
   resize: none;
 }
+
+
+md-input-container {
+    margin: 0;
+    padding: 2px;
+}
