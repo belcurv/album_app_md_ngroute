@@ -66,11 +66,6 @@
 
     
     // ============================== Controllers =============================
-    albumApp.controller('mainController', ['$scope', function ($scope) {
-        
-    }]);
-    
-    
     albumApp.controller('homeController', ['$scope', 'Albums', '$http', '$mdToast', '$mdSidenav', function ($scope, Albums, $http, $mdToast, $mdSidenav) {
         
         // UTILITY METHODS
