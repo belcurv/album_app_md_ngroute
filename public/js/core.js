@@ -44,11 +44,23 @@
     
     // =============================== Services ===============================
     albumApp.factory('Albums', function ($http) {
+        
+        var getResponse = {};
+        
         return {
 
             get : function () {
                 return $http.get('/api/albums');
             },
+            
+//            get : function () {
+//                $http.get('/api/albums')
+//                    .then(function successCallback(response) {
+//                        getResponse = response;
+//                    }, function errorCallback(err) {
+//                        console.log('Error: ' + err);
+//                    });
+//            },
 
             create : function (albumData) {
                 return $http.post('api/albums', albumData);
@@ -60,7 +72,12 @@
 
             update : function (id, updateData) {
                 return $http.put('api/albums/' + id, updateData);
+            },
+            
+            getGetResponse : function () {
+                return getResponse;
             }
+            
         };
     });
 
@@ -99,6 +116,12 @@
                 $scope.albums = data;
                 showToast('Database connected');
             });
+        
+//        Albums.get()
+//            .success(function () {
+//                $scope.albums = Albums.getGetResponse;
+//                showToast('Database connected');
+//            });
 
         // CREATE =================================================================
         // when submitting the add form, send the text to the Node API
